@@ -24,3 +24,31 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+.floating {
+  animation: float 3.5s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+/* hero overlay is handled by Tailwind classes in the component */
+@keyframes floatY {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0); }
+}
+
+/* apply gentle float to the left/right SVG groups on larger screens */
+@media (min-width: 768px) {
+  .pointer-events-none > svg {
+    animation: floatY 4s ease-in-out infinite;
+  }
+}
+
+/* make sure body and html have full height (if not already) */
+html, body, #__next {
+  height: 100%;
+}
+
