@@ -5,82 +5,85 @@ export default function OnboardingWelcome() {
     <>
       <Head>
         <title>PAVES Onboarding</title>
-        <meta name="description" content="Welcome to PAVES onboarding portal" />
       </Head>
 
-      <div className="min-h-screen w-full bg-white">
-        {/* HERO */}
-        <section className="relative w-full h-[56vh] md:h-[60vh] lg:h-[64vh] flex items-center justify-center overflow-hidden">
-          {/* Background image (place your hero image in public/onboarding-hero.jpg) */}
-          <div
-            className="absolute inset-0 bg-cover bg-center"
-            style={{
-              backgroundImage: "url('/onboarding-hero.jpg')",
-            }}
-            aria-hidden="true"
-          />
+      <div className="min-h-screen bg-[#e8f1ff] flex items-center justify-center py-12 px-4">
 
-          {/* Blue overlay */}
-          <div className="absolute inset-0 bg-[#0f3b68] bg-opacity-85"></div>
+        {/* MAIN CARD */}
+        <div className="bg-white shadow-xl rounded-2xl overflow-hidden max-w-6xl w-full grid grid-cols-1 md:grid-cols-2">
 
-          {/* Optional Logo top-left */}
-          <div className="absolute top-6 left-6 z-10">
-            <img src="/logo.svg" alt="PAVES logo" className="w-10 h-10" />
-          </div>
+          {/* ================= LEFT IMAGE SIDE ================= */}
+          <div className="relative h-[320px] md:h-auto">
+            <img
+              src="/images/culture1.png"
+              alt="PAVES Culture"
+              className="w-full h-full object-cover"
+            />
 
-          {/* Welcome Text */}
-          <h1
-            className="relative z-10 text-white text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-center"
-            aria-label="Welcome to PAVES"
-          >
-            Welcome!
-          </h1>
-        </section>
-
-        {/* CONTENT */}
-        <section className="relative w-full bg-white py-20 px-6 md:px-12 lg:px-20">
-          {/* Left decorative SVGs */}
-          <div className="pointer-events-none absolute left-6 top-10 md:left-12 md:top-20 z-0">
-            {/* stacked geometric SVG group */}
-            <svg width="120" height="320" viewBox="0 0 120 320" fill="none" xmlns="http://www.w3.org/2000/svg" className="block">
-              {/* top small triangle */}
-              <polygon points="30,10 60,40 0,40" fill="#FF6B61" />
-              {/* semicircle */}
-              <path d="M90 70 A30 30 0 0 1 30 70 L90 70 Z" fill="#FFC857" />
-              {/* teal rounded square with circle cutout */}
-              <rect x="0" y="90" width="80" height="80" rx="18" fill="#2AD1C6" />
-              <circle cx="30" cy="130" r="18" fill="#ffffff" />
-              {/* diagonal orange bar */}
-              <rect x="30" y="190" width="80" height="24" rx="6" transform="rotate(-20 30 190)" fill="#FF8A4C" />
-              {/* grey circle bottom */}
-              <circle cx="30" cy="280" r="24" fill="#DDDDDD" />
+            {/* Blue bottom curve */}
+            <svg
+              className="absolute bottom-0 left-0 w-full h-20"
+              viewBox="0 0 500 150"
+              preserveAspectRatio="none"
+            >
+              <path
+                d="M-9.31,84.27 C150.00,150.00 349.20,0.00 512.39,104.16 L500.00,0.00 L0.00,0.00 Z"
+                fill="#2b63f1"
+              ></path>
             </svg>
           </div>
 
-          {/* Right decorative SVGs */}
-          <div className="pointer-events-none absolute right-6 top-10 md:right-12 md:top-20 z-0">
-            <svg width="140" height="320" viewBox="0 0 140 320" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* top quarter circle */}
-              <path d="M140 0 A40 40 0 0 0 100 40 L140 40 Z" fill="#E6E6E6" />
-              {/* orange semicircle */}
-              <path d="M140 60 A30 30 0 0 0 80 60 L140 60 Z" fill="#FF8A4C" />
-              {/* small red arc */}
-              <path d="M110 120 A18 18 0 0 0 74 120 L110 120 Z" fill="#FF6B61" />
-              {/* orange slanted bar */}
-              <rect x="10" y="170" width="90" height="26" rx="6" transform="rotate(20 10 170)" fill="#FFB04C" />
-              {/* grey circle bottom */}
-              <circle cx="100" cy="280" r="30" fill="#E9E9E9" />
-            </svg>
-          </div>
+          {/* ================= RIGHT CONTENT AREA ================= */}
+          <div className="relative bg-white p-10 md:p-12 flex flex-col justify-center">
 
-          {/* Main centered text */}
-          <div className="relative z-10 max-w-3xl mx-auto text-center">
-            <p className="text-gray-700 text-lg md:text-xl lg:text-2xl leading-relaxed font-medium">
-              Welcome to the Company! Where innovation meets excellence. Thrilled to have you on board for a journey of success
-              together!
+            {/* Curved top shape */}
+            <div className="absolute right-0 top-0">
+              <svg width="120" height="120" viewBox="0 0 120 120">
+                <path
+                  d="M0 0 H120 V60 C80 80 40 40 0 60 Z"
+                  fill="#2b63f1"
+                  opacity="0.8"
+                />
+              </svg>
+            </div>
+
+            <p className="text-gray-500 text-sm mb-2">PAVES Corporation</p>
+
+            {/* FORMAL HEADING */}
+            <h1 className="text-3xl md:text-4xl font-bold leading-snug text-gray-800 mb-4">
+              Introduction to the <span className="text-[#2b63f1]">Onboarding Portal</span>
+            </h1>
+
+            {/* FORMAL TEXT */}
+            <p className="text-gray-600 leading-relaxed mb-4">
+              We appreciate your interest in progressing with PAVES.  
+              This portal has been designed to provide you with essential information and a structured overview of the
+              forthcoming onboarding activities.
             </p>
+
+            <p className="text-gray-600 leading-relaxed">
+              Here, you will find details regarding our organizational culture, expectations, and the steps required to
+              complete your pre-joining formalities.  
+              Our objective is to ensure a clear, smooth, and professional onboarding experience as you move toward the
+              next stage of engagement with PAVES.
+            </p>
+
+            {/* CTA BUTTON */}
+            <button className="mt-8 flex items-center gap-3 bg-[#2b63f1] hover:bg-[#1e49b3] text-white font-medium px-6 py-3 rounded-xl shadow-md transition">
+              Proceed
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14M13 6l6 6-6 6"
+                  stroke="white"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </button>
+
           </div>
-        </section>
+        </div>
       </div>
     </>
   );
